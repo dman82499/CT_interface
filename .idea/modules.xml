@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ADAW-1.0/.idea/ADAW-1.0.iml" filepath="$PROJECT_DIR$/../ADAW-1.0/.idea/ADAW-1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CT_interface/CT interface/.idea/CT interface.iml" filepath="$PROJECT_DIR$/../CT_interface/CT interface/.idea/CT interface.iml" />
+      <module fileurl="file://$USER_HOME$/eclipse-workspace/CT_2.0/.idea/CT_2.0.iml" filepath="$USER_HOME$/eclipse-workspace/CT_2.0/.idea/CT_2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CT_interface/.idea/CT_interface.iml" filepath="$PROJECT_DIR$/../CT_interface/.idea/CT_interface.iml" />
+    </modules>
+  </component>
+</project>
