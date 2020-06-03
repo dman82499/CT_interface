@@ -11,7 +11,12 @@ Essentially serilizes objects and puts them in a database.
 '''
 class Repetitionsdatabase:
 
-    def __init__(self, path=""):
+    def __init__(self, path = ""):
+        if(path == ""):
+            print("WARNING: no path currently set. Please define a path")
+        self.path = path
+
+    def __init__2(self, path=""):
         if path != "":
             if os.path.isfile(path):
                 self.path = path
@@ -50,6 +55,16 @@ class Repetitionsdatabase:
     def setdirectory(self, path):
         self.path = path
 
+    def returndirectory(self):
+        return self.path
+
+    def createpipe(self):
+        print("Attempting to create pipe in the directory...")
+        os.mkfifo(self.path)
+
+    def createrepfile(self):
+        d = pickle.Pickler()
+
     def createchceckrepetitionlfile(self):
         text = "ABCD"
         # The first step before doing this is to encypt the new file
@@ -73,8 +88,13 @@ class Repetitionsdatabase:
         #for (root, dirs, files in os.walk()):
             #if name in files:
                 #return os.path.join(root, name)
+        return
 
     def updatedatabase(self, repetitions):
+        """
+
+        :param repetitions:
+        """
         # the repetitions could all be stored as a single file, however we use a database for security, and for specific use later
         for x in repetitions:
             repetit = pickle.dumps(x)
@@ -89,3 +109,8 @@ class Repetitionsdatabase:
         filef2 = open(self.path + "repe.ctsl")
         repet = pickle.load(filef2)
         return repet
+
+    def __str__(self):
+        the_info = "repetitions database object."
+        the_info += "path = "+ self.path
+        return the_info
